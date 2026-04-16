@@ -1,0 +1,26 @@
+{
+  "name": "agents-week-fomo",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Aggregate Cloudflare Agents Week content from blog posts and X/Twitter",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "blogs": "tsx src/fetch-blogs.ts",
+    "download-blogs": "tsx src/download-blogs.ts",
+    "images": "tsx src/generate-images.ts",
+    "pipeline": "tsx src/pipeline.ts",
+    "stitch": "tsx src/stitch.ts",
+    "thread": "tsx src/create-thread.ts",
+    "handles": "tsx src/collect-handles.ts",
+    "tweets": "tsx src/fetch-tweets.ts"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "twitter-api-v2": "^1.19.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,254 @@
+import * as cheerio from "cheerio";
+import { writeFileSync, mkdirSync } from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const DATA_DIR = join(__dirname, "..", "data");
+
+export interface BlogPost {
+  title: string;
+  url: string;
+  date: string;
+  authors: string[];
+  summary: string;
+  tags: string[];
+}
+
+export async function fetchBlogs(): Promise<BlogPost[]> {
+  console.log("Fetching Agents Week blog posts...");
+
+  const res = await fetch("https://blog.cloudflare.com/tag/agents-week/");
+  const html = await res.text();
+  const $ = cheerio.load(html);
+
+  const posts: BlogPost[] = [];
+
+  // Parse the blog listing page for post cards
+  $("article, [class*='post'], a[href*='/']").each((_, el) => {
+    const $el = $(el);
+    const link = $el.is("a") ? $el.attr("href") : $el.find("a").first().attr("href");
+    const title = $el.find("h2, h3").first().text().trim() || $el.find("[class*='title']").first().text().trim();
+
+    if (link && title && link.startsWith("/") && !link.startsWith("/tag/") && !link.startsWith("/author/")) {
+      const url = `https://blog.cloudflare.com${link}`;
+      if (!posts.find((p) => p.url === url)) {
+        posts.push({
+          title,
+          url,
+          date: "",
+          authors: [],
+          summary: "",
+          tags: ["agents-week"],
+        });
+      }
+    }
+  });
+
+  // Use our curated known list as the primary source
+  // and augment with any scraped posts we don't already have
+  const known = getKnownPosts();
+  const knownUrls = new Set(known.map((p) => p.url));
+
+  let augmented = 0;
+  for (const post of posts) {
+    if (!knownUrls.has(post.url)) {
+      known.push(post);
+      augmented++;
+    }
+  }
+
+  console.log(`Known list: ${known.length - augmented} posts, scraped ${augmented} additional`);
+  return known;
+}
+
+function getKnownPosts(): BlogPost[] {
+  return [
+    {
+      title: "Welcome to Agents Week",
+      url: "https://blog.cloudflare.com/welcome-to-agents-week/",
+      date: "2026-04-12",
+      authors: ["Rita Kozlov", "Dane Knecht"],
+      summary: "Cloudflare kicks off Agents Week, dedicated to building the Internet for the age of AI agents. Covers the gap between container-based compute and the isolate-based model needed for billions of agent sessions.",
+      tags: ["agents-week", "agents", "workers", "serverless"],
+    },
+    {
+      title: "Building a CLI for all of Cloudflare",
+      url: "https://blog.cloudflare.com/cf-cli-local-explorer/",
+      date: "2026-04-13",
+      authors: ["Matt TK Taylor"],
+      summary: "Introducing the unified `cf` CLI for all Cloudflare products, plus a local explorer for browsing your Cloudflare resources.",
+      tags: ["agents-week", "cli", "developer-tools"],
+    },
+    {
+      title: "Durable Objects in Dynamic Workers: Give each AI-generated app its own database",
+      url: "https://blog.cloudflare.com/durable-object-facets-dynamic-workers/",
+      date: "2026-04-13",
+      authors: ["Kenton Varda"],
+      summary: "Durable Object Facets allow dynamic Workers to have their own databases, enabling AI-generated apps to have per-instance state.",
+      tags: ["agents-week", "durable-objects", "workers"],
+    },
+    {
+      title: "Agents have their own computers with Sandboxes GA",
+      url: "https://blog.cloudflare.com/sandbox-ga/",
+      date: "2026-04-13",
+      authors: [],
+      summary: "Container-based sandbox environments go GA, giving agents full compute environments with filesystems, git, bash, and binary execution.",
+      tags: ["agents-week", "sandboxes", "agents"],
+    },
+    {
+      title: "Securing non-human identities: automated revocation, OAuth, and scoped permissions",
+      url: "https://blog.cloudflare.com/improved-developer-security/",
+      date: "2026-04-14",
+      authors: [],
+      summary: "New security features for managing non-human identities including automated token revocation, OAuth improvements, and scoped permissions.",
+      tags: ["agents-week", "security", "identity"],
+    },
+    {
+      title: "Scaling MCP adoption: reference architecture for enterprise MCP deployments",
+      url: "https://blog.cloudflare.com/enterprise-mcp/",
+      date: "2026-04-14",
+      authors: ["Sharon Goldberg", "Matt Carey"],
+      summary: "Enterprise reference architecture for deploying MCP servers at scale, with governance and security controls.",
+      tags: ["agents-week", "mcp", "enterprise"],
+    },
+    {
+      title: "Managed OAuth for Access: make internal apps agent-ready in one click",
+      url: "https://blog.cloudflare.com/managed-oauth-for-access/",
+      date: "2026-04-14",
+      authors: ["Eduardo Gomes"],
+      summary: "One-click OAuth for Cloudflare Access apps, making internal tools accessible to AI agents with proper authorization.",
+      tags: ["agents-week", "access", "oauth"],
+    },
+    {
+      title: "Secure private networking for everyone: introducing Cloudflare Mesh",
+      url: "https://blog.cloudflare.com/mesh/",
+      date: "2026-04-14",
+      authors: ["Thomas Gauvin"],
+      summary: "Cloudflare Mesh enables secure private networking between services, agents, and devices without VPNs.",
+      tags: ["agents-week", "networking", "mesh"],
+    },
+    {
+      title: "Project Think: building the next generation of AI agents on Cloudflare",
+      url: "https://blog.cloudflare.com/project-think/",
+      date: "2026-04-15",
+      authors: ["Sunil Pai"],
+      summary: "Next-generation Agents SDK with advanced reasoning, planning, and tool-use capabilities built on Cloudflare Workers.",
+      tags: ["agents-week", "agents", "sdk"],
+    },
+    {
+      title: "Introducing Agent Lee - a new interface to the Cloudflare stack",
+      url: "https://blog.cloudflare.com/introducing-agent-lee/",
+      date: "2026-04-15",
+      authors: [],
+      summary: "Agent Lee is an in-dashboard AI agent that helps developers build, deploy, and manage their Cloudflare resources through natural language.",
+      tags: ["agents-week", "agents", "dashboard"],
+    },
+    {
+      title: "Register domains wherever you build: Cloudflare Registrar API now in beta",
+      url: "https://blog.cloudflare.com/registrar-api-beta/",
+      date: "2026-04-15",
+      authors: ["Ankit Shah"],
+      summary: "Programmatic domain registration via API, enabling agents and automation tools to register and manage domains.",
+      tags: ["agents-week", "registrar", "api"],
+    },
+    {
+      title: "Browser Run: give your agents a browser",
+      url: "https://blog.cloudflare.com/browser-run-for-ai-agents/",
+      date: "2026-04-15",
+      authors: ["Kathy Liao"],
+      summary: "Browser Run provides headless browser instances for AI agents to navigate and interact with web content.",
+      tags: ["agents-week", "browser", "agents"],
+    },
+    {
+      title: "Rearchitecting the Workflows control plane for the agentic era",
+      url: "https://blog.cloudflare.com/workflows-v2/",
+      date: "2026-04-15",
+      authors: [],
+      summary: "Workflows v2 rearchitects the control plane for long-running, stateful agent workflows with better reliability and observability.",
+      tags: ["agents-week", "workflows", "agents"],
+    },
+    {
+      title: "Add voice to your agent",
+      url: "https://blog.cloudflare.com/voice-agents/",
+      date: "2026-04-15",
+      authors: ["Sunil Pai"],
+      summary: "Voice pipeline for building voice-enabled AI agents on Cloudflare, with real-time speech-to-text and text-to-speech.",
+      tags: ["agents-week", "voice", "agents"],
+    },
+    {
+      title: "Deploy Postgres and MySQL databases with PlanetScale + Workers",
+      url: "https://blog.cloudflare.com/deploy-planetscale-postgres-with-workers/",
+      date: "2026-04-15",
+      authors: ["Vy Ton", "Matt Silverlock"],
+      summary: "PlanetScale integration for deploying Postgres and MySQL databases connected to Cloudflare Workers.",
+      tags: ["agents-week", "database", "planetscale"],
+    },
+    {
+      title: "Artifacts: versioned storage that speaks Git",
+      url: "https://blog.cloudflare.com/artifacts-git-for-agents-beta/",
+      date: "2026-04-16",
+      authors: ["Matt Carey", "Matt Silverlock"],
+      summary: "Git-compatible versioned storage for agents, enabling version control and collaboration on agent-generated content.",
+      tags: ["agents-week", "storage", "git"],
+    },
+    {
+      title: "Cloudflare's AI Platform: an inference layer designed for agents",
+      url: "https://blog.cloudflare.com/ai-platform/",
+      date: "2026-04-16",
+      authors: ["Ming Lu", "Michelle Chen"],
+      summary: "AI Gateway as a unified inference layer for 14+ model providers, with new Workers AI binding and expanded model catalog.",
+      tags: ["agents-week", "ai-gateway", "inference"],
+    },
+    {
+      title: "Building the foundation for running extra-large language models",
+      url: "https://blog.cloudflare.com/high-performance-llms/",
+      date: "2026-04-16",
+      authors: ["Michelle Chen", "Kevin Flansburg", "Vlad Krasnov"],
+      summary: "Custom technology stack for running fast large language models on Cloudflare infrastructure, covering engineering trade-offs for high-performance inference.",
+      tags: ["agents-week", "llm", "infrastructure"],
+    },
+    {
+      title: "AI Search: the search primitive for your agents",
+      url: "https://blog.cloudflare.com/ai-search-agent-primitive/",
+      date: "2026-04-16",
+      authors: ["Gabriel Massadas", "Miguel Cardoso", "Anni Wang"],
+      summary: "AI Search as a retrieval primitive for agents: create instances, upload files, search with hybrid retrieval and relevance boosting.",
+      tags: ["agents-week", "ai-search", "retrieval"],
+    },
+    {
+      title: "Cloudflare Email Service: now in public beta. Ready for your agents",
+      url: "https://blog.cloudflare.com/email-for-agents/",
+      date: "2026-04-16",
+      authors: ["Thomas Gauvin"],
+      summary: "Email Service in public beta, enabling agents to send, receive, and process emails programmatically.",
+      tags: ["agents-week", "email", "agents"],
+    },
+  ];
+}
+
+async function main() {
+  const blogs = await fetchBlogs();
+
+  mkdirSync(DATA_DIR, { recursive: true });
+  const outPath = join(DATA_DIR, "blogs.json");
+  writeFileSync(outPath, JSON.stringify(blogs, null, 2));
+  console.log(`Wrote ${blogs.length} blog posts to ${outPath}`);
+
+  // Print summary by date
+  const byDate = new Map<string, BlogPost[]>();
+  for (const post of blogs) {
+    const d = post.date || "unknown";
+    if (!byDate.has(d)) byDate.set(d, []);
+    byDate.get(d)!.push(post);
+  }
+  console.log("\nBlog posts by date:");
+  for (const [date, posts] of [...byDate.entries()].sort()) {
+    console.log(`  ${date}: ${posts.length} posts`);
+    for (const p of posts) {
+      console.log(`    - ${p.title}`);
+    }
+  }
+}
+
+main().catch(console.error);

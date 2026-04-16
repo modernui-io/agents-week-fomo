@@ -1,0 +1,502 @@
+[
+  {
+    "handle": "Cloudflare",
+    "displayName": "Cloudflare",
+    "bio": "Cloudflare is the world's leading #ConnectivityCloud, and we have our eyes set on an ambitious goal -- to help build a #BetterInternet."
+  },
+  {
+    "handle": "CloudflareDev",
+    "displayName": "Cloudflare Developers",
+    "bio": "Have questions, or building something cool with Cloudflare's Developer products? We're here to help."
+  },
+  {
+    "handle": "CFchangelog",
+    "displayName": "Cloudflare Changelog",
+    "bio": "The official @Cloudflare changelog feed."
+  },
+  {
+    "handle": "CloudflareRadar",
+    "displayName": "Cloudflare Radar",
+    "bio": "Internet trends, as seen by the @Cloudflare global network."
+  },
+  {
+    "handle": "eastdakota",
+    "displayName": "Matthew Prince",
+    "bio": "A little bit geek, wonk, and nerd. Repeat entrepreneur, recovering lawyer, and former ski instructor. Co-founder & CEO of Cloudflare (NYSE: NET)."
+  },
+  {
+    "handle": "dok2001",
+    "displayName": "Dane Knecht",
+    "bio": "I help invent the future. CTO @cloudflare. Angel investor."
+  },
+  {
+    "handle": "ritakozlov",
+    "displayName": "rita kozlov",
+    "bio": "vp developers & ai @cloudflare. and how does that error make you feel?"
+  },
+  {
+    "handle": "elithrar",
+    "displayName": "Matt Silverlock",
+    "bio": "VP of product: storage & databases & a few other things @cloudflare"
+  },
+  {
+    "handle": "LakeAustinBlvd",
+    "displayName": "sam rhea",
+    "bio": "Texan in PT. VP of Product @Cloudflare. I spend most of my free time walking a dog named Mopac."
+  },
+  {
+    "handle": "celso",
+    "displayName": "Celso Martinho",
+    "bio": "From when Mosaic took over Gopher. VP of Engineering @cloudflare"
+  },
+  {
+    "handle": "bjyule",
+    "displayName": "Benjamin Yule",
+    "bio": "VP Eng for Workers @Cloudflare. Previously helping the world breathe better - CTO @Spire_health (YC W15)."
+  },
+  {
+    "handle": "BellaTweetz",
+    "displayName": "Daniella V.",
+    "bio": "Vice President, Head of Global Communications @Cloudflare. The higher the hair, the closer to the clouds!"
+  },
+  {
+    "handle": "williamallen",
+    "displayName": "William Allen",
+    "bio": "Helping to build @Snowflake Intelligence & Agents. Prior: VP at @Cloudflare, Founder, VP @Adobe."
+  },
+  {
+    "handle": "KentonVarda",
+    "displayName": "Kenton Varda",
+    "bio": "Tech lead for @Cloudflare Workers, sandstorm.io, capnproto.org, lanparty.house."
+  },
+  {
+    "handle": "IgorMinar",
+    "displayName": "Igor Minar",
+    "bio": "Helping make the world a bit better through better Web. @Cloudflare. Previously: Angular, Google, Sun"
+  },
+  {
+    "handle": "southpolesteve",
+    "displayName": "Steve Faulkner",
+    "bio": "working on workers who work on workers @cloudflare / South Pole visitor"
+  },
+  {
+    "handle": "dillon_mulroy",
+    "displayName": "Dillon Mulroy",
+    "bio": "principal engineer @cloudflare. tweets about functional programming, typescript, neovim, & formula 1"
+  },
+  {
+    "handle": "chatsidhartha",
+    "displayName": "Sid",
+    "bio": "Principal Systems Engineer @Cloudflare. Building Cloudflare Workflows. Building @rustforjsdev. Prev @GatsbyJS"
+  },
+  {
+    "handle": "shridharathi",
+    "displayName": "Shridhar",
+    "bio": "engineer @cloudflare"
+  },
+  {
+    "handle": "zebassembly",
+    "displayName": "zeb",
+    "bio": "eng @cloudflare he/him"
+  },
+  {
+    "handle": "whoiskatrin",
+    "displayName": "kate",
+    "bio": "building agents and sandboxes @cloudflare. prev @apple, @ebay. mildly interesting / highly competitive."
+  },
+  {
+    "handle": "ghostwriternr",
+    "displayName": "Naresh",
+    "bio": "agents agent @cloudflare. Tell me, what is it you plan to do with your one wild and precious life?"
+  },
+  {
+    "handle": "mattzcarey",
+    "displayName": "Matt Carey",
+    "bio": "agents and mcp @cloudflare, former pro windsurfer. hype @demodaysai @shippiedev @badagentpod .. occasional angel"
+  },
+  {
+    "handle": "_mchenco",
+    "displayName": "michelle",
+    "bio": "terminal romantic @cloudflare"
+  },
+  {
+    "handle": "burcs",
+    "displayName": "brandon",
+    "bio": "product @cloudflare | founder @outerbase (acquired) @ycombinator (w23)"
+  },
+  {
+    "handle": "yomnashousha",
+    "displayName": "Yomna Shousha",
+    "bio": "product @cloudflaredev"
+  },
+  {
+    "handle": "nevikashah",
+    "displayName": "Nevi Shah",
+    "bio": "building workers observability. pm @cloudflaredev"
+  },
+  {
+    "handle": "minglu",
+    "displayName": "Ming",
+    "bio": "ai product @cloudflare"
+  },
+  {
+    "handle": "darkmembo",
+    "displayName": "Mark Dembo",
+    "bio": "Powered by coffee. Helping people build on @cloudflare"
+  },
+  {
+    "handle": "aninibread",
+    "displayName": "Anni Wang",
+    "bio": "r2, ai search @ cloudflare, uwaterloo alum"
+  },
+  {
+    "handle": "jamesqquick",
+    "displayName": "James Q Quick",
+    "bio": "Developer Educator, @cloudflare | Keynote Speaker, Creator, and Teacher. Motto - #LearnBuildTeach"
+  },
+  {
+    "handle": "fayazara",
+    "displayName": "Fayaz Ahmed",
+    "bio": "Sr. Dev Educator @cloudflare, also building supersaas.dev at nights"
+  },
+  {
+    "handle": "kristianfreeman",
+    "displayName": "Kristian Freeman",
+    "bio": "Tokenmaxxing @Cloudflare, musician. ATX."
+  },
+  {
+    "handle": "harshil1712",
+    "displayName": "Harshil",
+    "bio": "Builder, Author, Educator | @Cloudflare. Building forwardcents.app, docsforai.dev, ai-slides.app"
+  },
+  {
+    "handle": "threepointone",
+    "displayName": "sunil pai",
+    "bio": "Entscheidungsproblem. github.com/cloudflare/age forky mcforkface."
+  },
+  {
+    "handle": "ThomasJDesmond",
+    "displayName": "Thomas Desmond",
+    "bio": "@Cloudflare Senior Demo Engineer | Camper | Motorcycle Rider"
+  },
+  {
+    "handle": "PeterSaulitis",
+    "displayName": "Peter Saulitis",
+    "bio": "Dev Marketing @Cloudflare. Founder lawndie.com"
+  },
+  {
+    "handle": "_ashleypeacock",
+    "displayName": "Ashley Peacock",
+    "bio": "Cloudflare Dev Expert & Author. Cloudflare book: tinyurl.com/cloudflare-ser"
+  },
+  {
+    "handle": "superhighfives",
+    "displayName": "Charlie Gleason",
+    "bio": "Design engineering @cloudflare, formerly @replicate @salesforce @heroku."
+  },
+  {
+    "handle": "allnoteson",
+    "displayName": "Andreas Jansson",
+    "bio": "Harness engineer @cloudflare, previously co-founder @replicate, machine learning @spotify. General midi enthusiast"
+  },
+  {
+    "handle": "mattrothenberg",
+    "displayName": "matt rothenberg",
+    "bio": "big dork energy, KY -> NY @cloudflare, prev @replicate"
+  },
+  {
+    "handle": "corywilkerson",
+    "displayName": "Cory Wilkerson",
+    "bio": "@cloudflare @replicate @retool @github. bay area."
+  },
+  {
+    "handle": "lucatac0",
+    "displayName": "Luis Catacora",
+    "bio": "Making AI models run worldwide GenAI @Cloudflare | prev @replicate (acquired)"
+  },
+  {
+    "handle": "zsakib_",
+    "displayName": "Sakib",
+    "bio": "AI since 2017. scottish creative machine learning engineer @hedra_labs, x- @replicate (acquired by @cloudflare)"
+  },
+  {
+    "handle": "AlexVianaPro",
+    "displayName": "Alex C. Viana",
+    "bio": "Data, Math, and Engineering | Workers Observability EM @cloudflare | ex- Hubble Telescope ex- Vercel"
+  },
+  {
+    "handle": "boristane",
+    "displayName": "boris",
+    "bio": "building nominal.dev | prev @cloudflaredev, @baselimehq, aerodynamicist"
+  },
+  {
+    "handle": "zeke",
+    "displayName": "Zeke Sikelianos",
+    "bio": "Artificially intelligent human at @cloudflare. Previously @replicate, @github, @electronjs, @npmjs, @heroku, @wordnik."
+  },
+  {
+    "handle": "yusukebe",
+    "displayName": "Yusuke Wada",
+    "bio": "Developer Advocate @cloudflare. Creator of @honojs."
+  },
+  {
+    "handle": "BansalRishit",
+    "displayName": "Rishit Bansal",
+    "bio": "@cloudflare"
+  },
+  {
+    "handle": "thomasgauvin",
+    "displayName": "Thomas Gauvin",
+    "bio": "building @cloudflare dev plat, prev @microsoft. opinions=own. also I build things: protoagent.dev, geofetcher.com, mcpinterceptor.com"
+  },
+  {
+    "handle": "akaphill",
+    "displayName": "Phillip Jones",
+    "bio": "PM at @Cloudflare. @Stanford alum."
+  },
+  {
+    "handle": "heydna_",
+    "displayName": "Deanna Lam",
+    "bio": "product @cloudflaredev"
+  },
+  {
+    "handle": "MarcSelwan",
+    "displayName": "Marc",
+    "bio": "Product @Cloudflare working on R2 Data Catalog, Pipelines, and R2 SQL. Databases, streaming, distributed systems."
+  },
+  {
+    "handle": "Jilles",
+    "displayName": "Jilles Soeters",
+    "bio": "Developer Relations @Cloudflare -- previously eng. @Udemy, @ING"
+  },
+  {
+    "handle": "MattieTK",
+    "displayName": "Matt 'TK' Taylor",
+    "bio": "pm on developer platform @cloudflare. formerly @FT."
+  },
+  {
+    "handle": "JackOfMyTrades",
+    "displayName": "Victoria",
+    "bio": "Inventor. Nwa Obodo. @cloudflare | Previously @GitHub @Microsoft @IBM"
+  },
+  {
+    "handle": "miacmal",
+    "displayName": "mia",
+    "bio": "pm for workflows & queues @cloudflaredev"
+  },
+  {
+    "handle": "WalshyDev",
+    "displayName": "Walshy",
+    "bio": "Programmer, data collector, #Bitcoin supporter. Working at @Cloudflare on solving the hard issues"
+  },
+  {
+    "handle": "kkblinder",
+    "displayName": "Kari Linder",
+    "bio": "It's Kari but Karl is fine too. Draws pictures for Cloudflare"
+  },
+  {
+    "handle": "adam_janis",
+    "displayName": "Adam Janis",
+    "bio": "CZ in PT. Staff Engineer, previously @Cloudflare Builder. rlimit.com"
+  },
+  {
+    "handle": "zaid",
+    "displayName": "Zaid Farooqui",
+    "bio": "currently: tinkering before: product @cloudflare"
+  },
+  {
+    "handle": "fireblaze_15",
+    "displayName": "Rahul Suresh",
+    "bio": "Engineering @Cloudflare R2 Storage. CS @UofIllinois. Full stack TypeScript."
+  },
+  {
+    "handle": "mwylde",
+    "displayName": "Micah Wylde",
+    "bio": "Stream processing and query engines @Cloudflare. Prev co-founder @ArroyoSystems."
+  },
+  {
+    "handle": "korinne_dev",
+    "displayName": "korinne",
+    "bio": "Realtime / WebRTC @ Cloudflare. Previously worked on Terraform Core, Apollo Federation Core, and IBM Mainframes"
+  },
+  {
+    "handle": "megaconfidence",
+    "displayName": "Confidence",
+    "bio": "DevRel Engineer @cloudflare. Web Platform Advocate. Learning Rust."
+  },
+  {
+    "handle": "Kian_NH",
+    "displayName": "Kian",
+    "bio": "Systems Engineer, Containers @ Cloudflare"
+  },
+  {
+    "handle": "glenmaddern",
+    "displayName": "Glen Maddern",
+    "bio": "New stuff @ NVIDIA. prev MCP @ Groq, D1 & Pages at Cloudflare, styled-components, CSS Modules"
+  },
+  {
+    "handle": "RReverser",
+    "displayName": "Ingvar Stepanyan",
+    "bio": "OSS devtools, ex-Google Chrome, ex-Cloudflare, these days actively working in the WebAssembly land."
+  },
+  {
+    "handle": "final_const",
+    "displayName": "Shvm",
+    "bio": "Building dynamoDB on cloudflare, Senior staff engineer, chess addict"
+  },
+  {
+    "handle": "matthewcp",
+    "displayName": "Matthew Phillips",
+    "bio": "Working on Astro @cloudflare Co-creator of @astrodotbuild. Builder of yums.email. Finite State Machines for life."
+  },
+  {
+    "handle": "ketanhwr",
+    "displayName": "Ketan",
+    "bio": "serverless runtime @cloudflare"
+  },
+  {
+    "handle": "csparks1919",
+    "displayName": "Christian Sparks",
+    "bio": "founding eng, agents @omnaraai fmr @cloudflare workers"
+  },
+  {
+    "handle": "irvinebroque",
+    "displayName": "Brendan Irvine-Broque",
+    "bio": "sr director of product, workers @cloudflare"
+  },
+  {
+    "handle": "DhravyaShah",
+    "displayName": "Dhravya Shah",
+    "bio": "the memory/context guy founder @supermemory, prev @cloudflare, @solofounders, @neo finalist"
+  },
+  {
+    "handle": "dinasaur_404",
+    "displayName": "dina kozlov",
+    "bio": "pm on developer platform @ cloudflare! workin' on workers!"
+  },
+  {
+    "handle": "mibullock",
+    "displayName": "Matt Bullock",
+    "bio": "Product @ Cloudflare. Views are my own and are usually pretty boring."
+  },
+  {
+    "handle": "ade_oshineye",
+    "displayName": "Adewale Oshineye",
+    "bio": "DevRel@CloudflareDev Co-author of Apprenticeship Patterns. Learning to listen. Making things happen. Telling better stories."
+  },
+  {
+    "handle": "simonhimself",
+    "displayName": "Simon",
+    "bio": "Biz/Corp Dev @ Cloudflare, AI tinkerer"
+  },
+  {
+    "handle": "deathbyknowledg",
+    "displayName": "Steve James",
+    "bio": "Caise P. | console cowboy | prev: agents @cloudflare"
+  },
+  {
+    "handle": "CloudflareSys",
+    "displayName": "Cloudflare Status",
+    "bio": "Cloudflare system status page is found at cloudflarestatus.com."
+  },
+  {
+    "handle": "CloudflareTV",
+    "displayName": "Cloudflare TV",
+    "bio": "Cloudflare TV is a global destination for engaging conversations and unique perspectives from technology leaders helping to build a better Internet."
+  },
+  {
+    "handle": "CloudflareJobs",
+    "displayName": "Cloudflare Jobs",
+    "bio": "Want to stay informed on job openings at Cloudflare? Follow this account and we will post them here!"
+  },
+  {
+    "handle": "1111Resolver",
+    "displayName": "Cloudflare DNS",
+    "bio": "Tweet your DNS queries to me and I'll resolve them with 1.1.1.1! A and AAAA only."
+  },
+  {
+    "handle": "CloudflareAbuse",
+    "displayName": "Cloudflare Trust & Safety",
+    "bio": "Cloudflare Trust & Safety Team. Verifiable reports should be filed at cloudflare.com/abuse/"
+  },
+  {
+    "handle": "CloudflareHelp",
+    "displayName": "Cloudflare Help",
+    "bio": "For help with your Cloudflare account."
+  },
+  {
+    "handle": "Cloudflare_jp",
+    "displayName": "Cloudflare (Japan)",
+    "bio": "Cloudflare's official Japanese-language account."
+  },
+  {
+    "handle": "Cloudflare_es",
+    "displayName": "Cloudflare (Espanol)",
+    "bio": "Cloudflare's official Spanish-language account."
+  },
+  {
+    "handle": "Cloudflare_br",
+    "displayName": "Cloudflare (Brasil)",
+    "bio": "Cloudflare's official Portuguese-language account."
+  },
+  {
+    "handle": "Cloudflare_de",
+    "displayName": "Cloudflare (Deutsch)",
+    "bio": "Cloudflare's official German-language account."
+  },
+  {
+    "handle": "Cloudflare_LAT",
+    "displayName": "Cloudflare LATAM",
+    "bio": "Cloudflare's official Latin America account."
+  },
+  {
+    "handle": "CloudflareLove",
+    "displayName": "Cloudflare Love",
+    "bio": "Sharing tweets of love about Cloudflare."
+  },
+  {
+    "handle": "dyte_io",
+    "displayName": "Dyte (now Cloudflare)",
+    "bio": "Real-time audio, video, and live streaming SDKs, ready to launch. Now part of Cloudflare."
+  },
+  {
+    "handle": "omtalk",
+    "displayName": "Omkar Khair",
+    "bio": "curious. helping build on @cloudflare."
+  },
+  {
+    "handle": "msmps_",
+    "displayName": "Matt Simpson",
+    "bio": "software engineer @cloudflare. passionate about typescript, rust, and ai. oss @ opentui"
+  },
+  {
+    "handle": "bouhmad",
+    "displayName": "Adam Bouhmad",
+    "bio": "Interested in the intersection of humanities & technology | Founder @Wavesmesh | Engineer | ex @HashiCorp Boundary | PM @Cloudflare"
+  },
+  {
+    "handle": "wishee0",
+    "displayName": "vaish",
+    "bio": "@cloudflare"
+  },
+  {
+    "handle": "pranavwtf",
+    "displayName": "Pranav Sekhar",
+    "bio": "Growth Lead @replicate / GTM @cloudflare. Prev 2x founder @ycombinator @a16zGames."
+  },
+  {
+    "handle": "rrnn",
+    "displayName": "Renan Dincer",
+    "bio": "realtime / webrtc / little ai @cloudflare"
+  },
+  {
+    "handle": "jeromeschneider",
+    "displayName": "Jerome Schneider",
+    "bio": "Father of 3. Principal Engineer, Building DBs @cloudflare. From 0 to 1. Maker."
+  },
+  {
+    "handle": "zatlyn",
+    "displayName": "Michelle Zatlyn",
+    "bio": "I enjoy building products people love. Young Global Leader. Co-founder, President + COO Cloudflare (NYSE: NET)."
+  }
+]
