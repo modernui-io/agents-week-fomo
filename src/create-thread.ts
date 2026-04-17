@@ -6,7 +6,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 
 const API_URL = "https://api.typefully.com/v2";
-const API_KEY = "dFh8HDIwZitGzsQg6lzPF3duj5lGCFTY";
+const API_KEY = process.env.TYPEFULLY_API_KEY;
+if (!API_KEY) throw new Error("TYPEFULLY_API_KEY env var is required");
 const SOCIAL_SET_ID = "104693";
 const VIDEO_PATH = join(ROOT, "output.mp4");
 
